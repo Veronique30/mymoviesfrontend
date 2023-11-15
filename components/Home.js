@@ -10,7 +10,9 @@ function Home() {
   const [likedMovies, setLikedMovies] = useState([]);
   const [moviesData, setMoviesData] = useState([]);
   useEffect(() => {
-    fetch("mymoviesbackend-1dmihoaj3-amildalas-projects.vercel.app")
+    fetch(
+      "https://mymoviesbackend-1dmihoaj3-amildalas-projects.vercel.app/movies"
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log("les informations :", data.movies);
